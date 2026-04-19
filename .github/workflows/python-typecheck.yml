@@ -34,4 +34,4 @@ jobs:
           ${{ inputs.install-command }}
 
       - name: Run mypy
-        run: mypy ${{ inputs.app-directory }}
+        run: mypy -p ${{ inputs.app-directory }}
