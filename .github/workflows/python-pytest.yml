@@ -15,10 +15,6 @@ on:
         required: false
         type: string
         default: "pip install -r requirements.txt"
-      test-command:
-        required: false
-        type: string
-        default: "pytest"
 
 jobs:
   pytest:
@@ -51,4 +47,4 @@ jobs:
           ${{ inputs.install-command }}
 
       - name: Run tests
-        run: ${{ inputs.test-command }}
+        run: python -m pytest
